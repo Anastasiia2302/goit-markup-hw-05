@@ -103,10 +103,8 @@ body {
   text-decoration: none;
   color:var(--second-color-text);
   fill:var(--second-color-text);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-}
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 .link:hover
  {
   color: var(--also-text-color);
@@ -137,11 +135,13 @@ body {
 }
 .smartphone {
   margin-right: 10px;
+ transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
   
 }
 .envelope {
   margin-right: 10px;
+  transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -218,6 +218,7 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)}
 
 .backdrop.is-hidden {opacity: 0;
 pointer-events: none;
+visibility: hidden;
 
 
 }
@@ -249,6 +250,7 @@ border-radius: 4px;
   background: #FFFFFF;
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
+cursor: pointer;
 
 }
 .vector {display: flex;
@@ -429,16 +431,14 @@ background: rgba(47, 48, 58, 0.8);}
   display: flex;
   margin-right: 10px;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
   
  
 }
 .list-social:nth-child(4) {
   margin-right: 0px;
 }
-.list-social:hover {
-  background-color: var(--also-text-color);
-}
+
 .social {
   fill: #afb1b8;
   display: flex;
@@ -446,18 +446,19 @@ background: rgba(47, 48, 58, 0.8);}
   justify-content: center;
   width: 44px;
   height: 44px;
-  transition:  fill 2500ms cubic-bezier(0.4, 0, 0.2, 1),
-  
- 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
 }
 .social:hover {
   fill: var(--second-background-color);
+  background-color: var(--also-text-color);
+  border-radius: 50%;
 }
 .social:focus {fill:var(--text-color);
   background-color: var(--also-text-color);
   border-radius: 50%;
 }
-
+.social-link { transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 /* client */
 .section-clients {
@@ -496,8 +497,7 @@ background: rgba(47, 48, 58, 0.8);}
   width: 170px;
   height: 92px;
   fill: #afb1b8;
-  transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  border 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .link-client:hover {
   fill: var(--also-text-color);
@@ -516,6 +516,7 @@ border-radius: 4px;
   height: 60px;
   justify-content: center;
   align-items: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* section-portfolio  */
@@ -596,7 +597,6 @@ border-radius: 4px;
   display: flex;
   display: block;
   margin-right: auto;
-  border: 1px solid #eeeeee;
   margin-bottom: 30px;
 
 }
@@ -618,8 +618,9 @@ border-radius: 4px;
 }
 .link-image:focus   {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);  }
 .link-image:hover { box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   
 }
 
@@ -645,6 +646,7 @@ border-radius: 4px;
   overflow: hidden;
 }
 .link-image:hover .container-hover {transform: translateY(0);}
+.link-image:focus .container-hover {transform: translateY(0);}
 .container-hover {
   position: absolute;
   top:0;
